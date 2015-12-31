@@ -1,87 +1,115 @@
 # Tipsy.sass
 A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrome, Firefox, Safari and Opera
 
+
+
+### Changelog
+- v1.1.0:
+  - added default values to arguments
+  - revised variable names to better reflect their associated css property
+  - added text color & box-shadow arguments
+  - removed support for `.scss` variant
+- v1.0.5:
+  - Change background variable
+  - Added arrow border size of tooltip
+- v1.0.4:
+  - Fix reversed tipsy. Thank you [@esteinborn](https://github.com/esteinborn)
+
+
+
 ## Installation
-* Clone ``git@github.com:dangvanthanh/tipsy.sass.git``
-* [Download the latest version](https://github.com/dangvanthanh/tipsy.sass/archive/master.zip)
+Clone `git@github.com:egladman/tipsy.sass.git` or [Download the latest version](https://github.com/egladman/tipsy.sass/archive/master.zip)
 
 ## Getting Started
 
-### You need import Tipsy.sass in your stylesheet
+### Import Tipsy.sass in your stylesheet
+
+**SCSS**
 
 ```scss
 @import "tipsy";
 ```
 
-### Tipsy.sass have 4 parameters allow you can customize
-
-**SCSS**
-
-```scss
-@mixin tipsy($gravity, $bgcolor, $bordersize, $radius) {...}
-```
-
 **SASS**
 
-```scss
-+tipsy($gravity, $bgcolor, $bordersize, $radius)
+```sass
+@import "tipsy"
 ```
 
-**PARAMETERS**
+### Tipsy.sass have 6 *optional* arguments
 
-```
-// Position of tooltip
-$gravity: nw | n | ne | e | se | s | sw | w
-// Background color of tooltip
-$bgcolor  : HEX, RGB, RGBA, HSL
-// Arrow size of tooltip
-$bordersize : px, em, rem
-// Border radius of tooltip
-$radius : px, em, rem
-```
+#### Tooltip & Arrow Position
+  ```
+  $gravity: nw | n | ne | e | se | s | sw | w`
+  ```
+
+#### Tooltip Text Color
+  ```
+  $color: HEX | RGB | RGBA | HSL
+  ```
+
+#### Tooltip Background Color
+  ```
+  $background: HEX | RGB | RGBA | HSL
+  ```
+
+#### Tooltip Arrow Size
+  ```
+  $border-size: px | em | rem
+  ```
+
+#### Tooltip Border Radius
+  ```
+  $border-radius: px | em | rem
+  ```
+
+#### Tooltip Shadow
+  ```
+  $box-shadow: 0px,0px,0px rgba(0,0,0,0.2)
+  // same syntax as the box-shadow css property
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  ```
+
 
 ### How to use
 
 #### HTML
-
 ```html
-<span class="tipsy" data-tipsy="Simple Tipsy">Simple Tipsy</span>
+<span data-tipsy="sample text that will be displayed in tooltip">foo bar</span>
 ```
 
 #### SCSS
-
 ```scss
-.tipsy--nw { @include tipsy(nw, #34495e, 5px, 0);  }
-.tipsy--n  { @include tipsy(n, #2ecc71, 5px, 3px); }
-.tipsy--ne { @include tipsy(ne, #3498db, 5px, 0);  }
-.tipsy--e  { @include tipsy(e, #9b59b6, 5px, 3px); }
-.tipsy--se { @include tipsy(se, #f39c12, 5px, 0);  }
-.tipsy--s  { @include tipsy(s, #d35400, 5px, 3px); }
-.tipsy--sw { @include tipsy(sw, #c0392b, 5px, 0);  }
-.tipsy--w  { @include tipsy(w, #8e44ad, 5px, 3px); }
+span {
+  @include tipsy();
+}
+
+//or
+
+span {
+  @include tipsy(s, #FFF, #000, 5px, 3px);
+}
+
+//or
+
+span {
+  @include tipsy(s, #FFF, #000, 5px, 3px, 2px 2px 5px rgba(0, 0, 0, .50));
+}
 ```
 
 #### SASS
-
 ```sass
-.tipsy--nw
-  +tipsy(nw, #34495e, 5px, 0)
-.tipsy--n
-  +tipsy(n, #2ecc71, 5px, 3px)
-.tipsy--ne
-  +tipsy(ne, #3498db, 5px, 0)
-.tipsy--e
-  +tipsy(e, #9b59b6, 5px, 3px)
-.tipsy--se
-  +tipsy(se, #f39c12, 5px, 0)
-.tipsy--s
-  +tipsy(s, #d35400, 5px, 3px)
-.tipsy--sw
-  +tipsy(sw, #c0392b, 5px, 0)
-.tipsy--w
-  +tipsy(w, #8e44ad, 5px, 3px)
+span
+  @include tipsy()  
+
+//or
+
+span
+  @include tipsy(s, #FFF, #000, 5px, 3px)
+
+//or
+
+span
+  @include tipsy(s, #FFF, #000, 5px, 3px, 2px 2px 5px rgba(0, 0, 0, .50))
 ```
 
-### Issues
-- Version 1.0.5: Change background variable and added arrow border size of tooltip
-- Version 1.0.4: Fix reversed tipsy. Thank you [@esteinborn](https://github.com/esteinborn)
