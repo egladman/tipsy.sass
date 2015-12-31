@@ -21,7 +21,7 @@ A CSS tooltip mixin for Sass
 
 ## Installation
 Three ways:
-- `bower install tipsy`
+- `bower install tipsy.sass`
 - Clone `git@github.com:egladman/tipsy.sass.git`
 - [Download the latest zip](https://github.com/egladman/tipsy.sass/archive/master.zip)
 
