@@ -9,7 +9,7 @@
  * version: 1.0.5
  */
 
-=tipsy($gravity: n, $color: rgb(100,100,100), $background: rgb(255,255,255), $border-size: 5px, $border-radius: 3px)
+=tipsy($gravity: n, $color: rgb(100,100,100), $background: rgb(255,255,255), $border-size: 5px, $border-radius: 3px, $box-shadow: 1px 1px 3px rgba(0, 0, 0, .2))
   position: relative
   display: inline-block
 
@@ -42,7 +42,7 @@
     color: $color
     padding: 5px 10px
     white-space: nowrap
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2)
+    box-shadow: $box-shadow
 
   @if $gravity == 'nw'
     &:hover, &:focus
