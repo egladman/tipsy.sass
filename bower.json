@@ -1,0 +1,26 @@
+{
+  "name": "tipsy.sass",
+  "homepage": "https://github.com/egladman/tipsy.sass",
+  "authors": [
+    "Eli Gladman <eli.gladman@gmail.com>"
+  ],
+  "description": "A CSS tooltip mixin for Sass",
+  "main": "_tipsy.sass",
+  "moduleType": [],
+  "keywords": [
+    "sass",
+    "mixin",
+    "partial",
+    "css",
+    "tooltip",
+    "hint"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
