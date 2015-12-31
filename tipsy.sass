@@ -4,7 +4,7 @@
  * @description: A Simple Mixin Tooltip CSS Using Sass
  * @version: 1.0.5
  */
-=tipsy($gravity, $bgcolor, $bordersize, $radius)
+=tipsy($gravity, $txtcolor, $bgcolor, $bordersize, $radius)
   position: relative
   display: inline-block
 
@@ -34,7 +34,7 @@
     content: attr(data-tipsy)
     background-color: $bgcolor
     border-radius: $radius
-    color: white
+    color: $txtcolor
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .2)
     padding: 5px 10px
     white-space: nowrap
