@@ -1,9 +1,11 @@
 # Tipsy.sass
-A mixin tooltip CSS for Sass.
+A CSS tooltip mixin for Sass
 
 
 
 ### Changelog
+- v1.1.1:
+  - added bower support
 - v1.1.0:
   - added default values to arguments
   - revised variable names to better reflect their associated css property
@@ -18,7 +20,10 @@ A mixin tooltip CSS for Sass.
 
 
 ## Installation
-Clone `git@github.com:egladman/tipsy.sass.git` or [Download the latest version](https://github.com/egladman/tipsy.sass/archive/master.zip)
+Three ways:
+- `bower install tipsy`
+- Clone `git@github.com:egladman/tipsy.sass.git`
+- [Download the latest zip](https://github.com/egladman/tipsy.sass/archive/master.zip)
 
 ## Getting Started
 
