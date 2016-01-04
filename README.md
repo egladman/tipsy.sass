@@ -8,7 +8,7 @@ An easy to use tooltip library implemented in Sass
   - fixed bug where the directional pointer would be prematurely clipped when `$gravity` was either `e` or `w`
   - changed the default tooltip text/background color
   - added missing browser prefixes to transformations and transitions
-  - used `em` and `ch` in favor of `px`
+  - used `em` and `ch` instead of `px`
 - v1.1.1:
   - added bower support
 - v1.1.0:
