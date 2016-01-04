@@ -12,7 +12,6 @@
 @mixin tipsy($gravity: n, $color: rgb(100,100,100), $background: rgb(255,255,255), $border-size: 0.325em, $border-radius: 0.175em, $box-shadow: 0 0.125em 0.175em rgba(0, 0, 0, .2))
   position: relative
   display: inline-block
-
   &:before, &:after
     position: absolute
     visibility: hidden
@@ -23,12 +22,10 @@
     -webkit-transform: translate3d(0, 0, 0)
     transition: .2s ease-in-out
     -webkit-transition: .2s ease-in-out
-
   &:before
     content: ''
     border: $border-size solid transparent
     z-index: 1000001
-
   &:after
     content: attr(data-tipsy)
     background-color: $background
@@ -37,7 +34,6 @@
     padding: 5px 10px
     white-space: nowrap
     box-shadow: $box-shadow
-
   &:hover, &:focus
     &:before, &:after
       visibility: visible
@@ -48,117 +44,90 @@
       border-top-color: $background
       top: -35%
       right: 60%
-
     &:after
       bottom: 135%
       right: 50%
-
     &:hover, &:focus
       &:before
         top: -15%
-
       &:after
         bottom: 115%
-
 
   @else if $gravity == 'n'
     &:before, &:after
       left: 50%
       transform: translateX(-50%)
       -webkit-transform: translateX(-50%)
-
     &:before
       border-top-color: $background
       top: -35%
-
     &:after
       bottom: 135%
-
     &:hover, &:focus
       &:before
         top: -15%
-
       &:after
         bottom: 115%
-
 
   @else if $gravity == 'ne'
     &:before
       border-top-color: $background
       top: -35%
       left: 60%
-
     &:after
       bottom: 135%
       left: 50%
-
     &:hover, &:focus
       &:before
         top: -15%
-
       &:after
         bottom: 115%
-
 
   @else if $gravity == 'e'
     &:before, &:after
       top: 50%
       transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
-
     &:before
       border-right-color: $background
       right: -35%
-
     &:after
       left: 135%
-
     &:hover, &:focus
       &:before
         right: -15%
-
       &:after
         left: 115%
-
 
   @else if $gravity == 'se'
     &:before
       border-bottom-color: $background
       left: 60%
       bottom: -35%
-
     &:after
       left: 50%
       top: 135%
-
     &:hover, &:focus
       &:before
         bottom: -15%
-
       &:after
         top: 115%
-
 
   @else if $gravity == 's'
     &:before, &:after
       left: 50%
       transform: translateX(-50%)
       -webkit-transform: translateX(-50%)
-
     &:before
       border-bottom-color: $background
       bottom: -35%
-
     &:after
       top: 135%
-
     &:hover, &:focus
       &:before
         bottom: -15%
-
       &:after
         top: 115%
-
 
   @else if $gravity == 'sw'
     &:before
@@ -173,27 +142,21 @@
     &:hover, &:focus
       &:before
         bottom: -15%
-
       &:after
         top: 115%
-
 
   @else if $gravity == 'w'
     &:before, &:after
       top: 50%
       transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
-
     &:before
       border-left-color: $background
       left: -35%
-
     &:after
       right: 125%
-
     &:hover, &:focus
       &:before
         left: -15%
-
       &:after
         right: 115%
