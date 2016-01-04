@@ -18,10 +18,10 @@
     opacity: 0
     z-index: 1000000
     pointer-events: none
-    transform: translate3d(0, 0, 0)
     -webkit-transform: translate3d(0, 0, 0)
-    transition: .2s ease-in-out
+    transform: translate3d(0, 0, 0)
     -webkit-transition: .2s ease-in-out
+    transition: .2s ease-in-out
   &:before
     content: ''
     border: $border-size solid transparent
@@ -56,8 +56,8 @@
   @else if $gravity == 'n'
     &:before, &:after
       left: 50%
-      transform: translateX(-50%)
       -webkit-transform: translateX(-50%)
+      transform: translateX(-50%)
     &:before
       border-top-color: $background
       top: -35%
@@ -86,8 +86,8 @@
   @else if $gravity == 'e'
     &:before, &:after
       top: 50%
-      transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
+      transform: translateY(-50%)
     &:before
       border-right-color: $background
       right: -35%
@@ -116,8 +116,8 @@
   @else if $gravity == 's'
     &:before, &:after
       left: 50%
-      transform: translateX(-50%)
       -webkit-transform: translateX(-50%)
+      transform: translateX(-50%)
     &:before
       border-bottom-color: $background
       bottom: -35%
@@ -134,11 +134,9 @@
       border-bottom-color: $background
       right: 60%
       bottom: -35%
-
     &:after
       right: 50%
       top: 135%
-
     &:hover, &:focus
       &:before
         bottom: -15%
@@ -148,8 +146,8 @@
   @else if $gravity == 'w'
     &:before, &:after
       top: 50%
-      transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
+      transform: translateY(-50%)
     &:before
       border-left-color: $background
       left: -35%
