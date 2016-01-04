@@ -4,7 +4,7 @@
   "authors": [
     "Eli Gladman <eli.gladman@gmail.com>"
   ],
-  "description": "A CSS tooltip mixin for Sass",
+  "description": "An easy to use tooltip library implemented in Sass",
   "main": "_tipsy.sass",
   "moduleType": [],
   "keywords": [

@@ -1,15 +1,20 @@
 # Tipsy.sass
-A CSS tooltip mixin for Sass
+An easy to use tooltip library implemented in Sass
 
 
 
 ### Changelog
+- v1.1.2:
+  - fixed bug where the directional pointer would be prematurely clipped when `$gravity` was either `e` or `w`
+  - changed the default tooltip text/background color
+  - added missing browser prefixes to transformations and transitions
+  - used `em` and `ch` in favor of `px`
 - v1.1.1:
   - added bower support
 - v1.1.0:
-  - added default values to arguments
+  - added default values to parameters
   - revised variable names to better reflect their associated css property
-  - added text color & box-shadow arguments
+  - added text color & box-shadow parameters
   - removed support for `.scss` variant
 - v1.0.5:
   - Change background variable
@@ -41,7 +46,7 @@ Three ways:
 @import "tipsy"
 ```
 
-### Tipsy.sass have 6 *optional* arguments
+### Tipsy.sass have 6 *optional* parameters
 
 #### Tooltip & Arrow Position
   ```
