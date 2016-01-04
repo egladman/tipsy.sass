@@ -15,6 +15,11 @@ a {
   a:hover {
     text-decoration: underline; }
 
+p>span[data-tipsy] {
+  font-weight: bold;
+}
+
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
