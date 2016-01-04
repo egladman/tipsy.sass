@@ -121,3 +121,6 @@ span
   @include tipsy(s, #FFF, #000, 5px, 3px, 2px 2px 5px rgba(0, 0, 0, .50))
 ```
 
+
+### Contributing
+Feel free to create issues, request features, or submit merge requests. 
