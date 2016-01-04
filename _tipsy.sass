@@ -19,8 +19,12 @@
     z-index: 1000000
     pointer-events: none
     -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
     transform: translate3d(0, 0, 0)
     -webkit-transition: .2s ease-in-out
+    -moz-transition: .2s ease-in-out
     transition: .2s ease-in-out
   &:before
     content: ''
@@ -57,6 +61,9 @@
     &:before, &:after
       left: 50%
       -webkit-transform: translateX(-50%)
+      -moz-transform: translateX(-50%)
+      -ms-transform: translateX(-50%)
+      -o-transform: translateX(-50%)
       transform: translateX(-50%)
     &:before
       border-top-color: $background
@@ -87,6 +94,9 @@
     &:before, &:after
       top: 50%
       -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
       transform: translateY(-50%)
     &:before
       border-right-color: $background
@@ -117,6 +127,9 @@
     &:before, &:after
       left: 50%
       -webkit-transform: translateX(-50%)
+      -moz-transform: translateX(-50%)
+      -ms-transform: translateX(-50%)
+      -o-transform: translateX(-50%)
       transform: translateX(-50%)
     &:before
       border-bottom-color: $background
@@ -147,6 +160,9 @@
     &:before, &:after
       top: 50%
       -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
       transform: translateY(-50%)
     &:before
       border-left-color: $background
