@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>tipsy.sass by egladman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">tipsy.sass</h1>
+      <h2 class="project-tagline">An easy to use tooltip library implemented in Sass</h2>
+      <a href="https://github.com/egladman/tipsy.sass" class="btn">View on GitHub</a>
+      <a href="https://github.com/egladman/tipsy.sass/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/egladman/tipsy.sass/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Three ways:</p>
+
+<ul>
+<li><code>bower install tipsy.sass</code></li>
+<li>Clone <code>git@github.com:egladman/tipsy.sass.git</code>
+</li>
+<li><a href="https://github.com/egladman/tipsy.sass/archive/master.zip">Download the latest zip</a></li>
+</ul>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a id="import-tipsysass-in-your-stylesheet" class="anchor" href="#import-tipsysass-in-your-stylesheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import Tipsy.sass in your stylesheet</h3>
+
+<p><strong>SCSS</strong></p>
+
+<div class="highlight highlight-source-scss"><pre><span class="pl-k">@import</span> "<span class="pl-v">tipsy</span>";</pre></div>
+
+<p><strong>SASS</strong></p>
+
+<div class="highlight highlight-source-sass"><pre><span class="pl-k">@import</span> <span class="pl-s">"tipsy"</span></pre></div>
+
+<h3>
+<a id="tipsysass-have-6-optional-parameters" class="anchor" href="#tipsysass-have-6-optional-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tipsy.sass have 6 <em>optional</em> parameters</h3>
+
+<h4>
+<a id="tooltip--arrow-position" class="anchor" href="#tooltip--arrow-position" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip &amp; Arrow Position</h4>
+
+<pre><code>  $gravity: nw | n | ne | e | se | s | sw | w`
+</code></pre>
+
+<h4>
+<a id="tooltip-text-color" class="anchor" href="#tooltip-text-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Text Color</h4>
+
+<pre><code>  $color: HEX | RGB | RGBA | HSL
+</code></pre>
+
+<h4>
+<a id="tooltip-background-color" class="anchor" href="#tooltip-background-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Background Color</h4>
+
+<pre><code>  $background: HEX | RGB | RGBA | HSL
+</code></pre>
+
+<h4>
+<a id="tooltip-arrow-size" class="anchor" href="#tooltip-arrow-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Arrow Size</h4>
+
+<pre><code>  $border-size: px | em | rem
+</code></pre>
+
+<h4>
+<a id="tooltip-border-radius" class="anchor" href="#tooltip-border-radius" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Border Radius</h4>
+
+<pre><code>  $border-radius: px | em | rem
+</code></pre>
+
+<h4>
+<a id="tooltip-shadow" class="anchor" href="#tooltip-shadow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Shadow</h4>
+
+<pre><code>  $box-shadow: 0px,0px,0px rgba(0,0,0,0.2)
+  // same syntax as the box-shadow css property
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+</code></pre>
+
+<h3>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h3>
+
+<h4>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h4>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">span</span> <span class="pl-e">data-tipsy</span>=<span class="pl-s"><span class="pl-pds">"</span>sample text that will be displayed in tooltip<span class="pl-pds">"</span></span>&gt;foo bar&lt;/<span class="pl-ent">span</span>&gt;</pre></div>
+
+<h4>
+<a id="scss" class="anchor" href="#scss" aria-hidden="true"><span class="octicon octicon-link"></span></a>SCSS</h4>
+
+<div class="highlight highlight-source-scss"><pre><span class="pl-ent">span</span> {
+  <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>();
+}
+
+<span class="pl-c">//or</span>
+
+<span class="pl-ent">span</span> {
+  <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>(<span class="pl-v">s</span>, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>);
+}
+
+<span class="pl-c">//or</span>
+
+<span class="pl-ent">span</span> {
+  <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>(<span class="pl-v">s</span>, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 5</span><span class="pl-k">px</span> <span class="pl-c1">rgba</span>(<span class="pl-c1">0, 0, 0</span>,<span class="pl-c1"> .50</span>));
+}</pre></div>
+
+<h4>
+<a id="sass" class="anchor" href="#sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>SASS</h4>
+
+<div class="highlight highlight-source-sass"><pre><span class="pl-k">span</span>
+  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>()  
+
+<span class="pl-c">//or</span>
+
+<span class="pl-k">span</span>
+  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>(s, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>)
+
+<span class="pl-c">//or</span>
+
+<span class="pl-k">span</span>
+  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>(s, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 5</span><span class="pl-k">px</span> <span class="pl-c1">rgba</span>(0, 0, 0, .50))</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/egladman/tipsy.sass">tipsy.sass</a> is maintained by <a href="https://github.com/egladman">egladman</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-64030654-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
