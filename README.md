@@ -1,4 +1,4 @@
-# Tipsy.sass
+# tipsy.sass
 An easy to use tooltip library implemented in Sass
 
 [DEMO](http://eli.gladman.xyz/tipsy.sass/)
@@ -30,7 +30,7 @@ An easy to use tooltip library implemented in Sass
 
 ## Getting Started
 
-### Import Tipsy.sass in your stylesheet
+### Import tipsy.sass in your stylesheet
 
 **SCSS**
 
@@ -44,79 +44,90 @@ An easy to use tooltip library implemented in Sass
 @import "tipsy"
 ```
 
-### Tipsy.sass have 6 *optional* parameters
+### tipsy has 6 *optional* parameters
 
-#### Tooltip & Arrow Position
-  ```
-  $gravity: nw | n | ne | e | se | s | sw | w`
-  ```
+1. Tooltip & Arrow Position
 
-#### Tooltip Text Color
-  ```
-  $color: HEX | RGB | RGBA | HSL
-  ```
+  `$gravity: nw | n | ne | e | se | s | sw | w`
+  - `nw` = northwest
+  -  `n` = north
+  - `nw` = northeast
+  - `se` = southeast
+  -  `s` = south
+  - `sw` = southwest
+  -  `w` = west
 
-#### Tooltip Background Color
-  ```
-  $background: HEX | RGB | RGBA | HSL
-  ```
+2. Tooltip Text Color
 
-#### Tooltip Arrow Size
-  ```
-  $border-size: px | em | rem
-  ```
+  `$color: HEX | RGB | RGBA | HSL`
 
-#### Tooltip Border Radius
-  ```
-  $border-radius: px | em | rem
-  ```
+3. Tooltip Background Color
 
-#### Tooltip Shadow
-  ```
-  $box-shadow: 0px,0px,0px rgba(0,0,0,0.2)
-  // same syntax as the box-shadow css property
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
-  ```
+  `$background: HEX | RGB | RGBA | HSL`
+
+4. Tooltip Arrow Size
+
+  `$border-size: px | em | rem`
+  *or any [unit of length](https://developer.mozilla.org/en-US/docs/Web/CSS/length)*
+
+5. Tooltip Border Radius
+
+  `$border-radius: px | em | rem`
+  *or any [unit of length](https://developer.mozilla.org/en-US/docs/Web/CSS/length)*
+
+6. Tooltip Shadow
+
+  `$box-shadow: 0px,0px,0px rgba(0,0,0,0.2)`
+  *same syntax as the [box-shadow css property](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)*
+
 
 
 ### How to use
 
-#### HTML
+##### HTML
 ```html
 <span data-tipsy="sample text that will be displayed in tooltip">foo bar</span>
 ```
 
-#### SCSS
-```scss
-span {
-  @include tipsy();
-}
+##### SCSS
 
-//or
+example one
+ ```scss
+  span {
+    @include tipsy();
+  }
+  ```
+  
+example two
+  ```scss
+  span {
+    @include tipsy(s, #FFF, #000, 5px, 3px);
+  }
+  ```
 
-span {
-  @include tipsy(s, #FFF, #000, 5px, 3px);
-}
-
-//or
-
-span {
-  @include tipsy(s, #FFF, #000, 5px, 3px, 2px 2px 5px rgba(0, 0, 0, .50));
-}
-```
+example three
+  ```scss
+  span {
+    @include tipsy(s, #FFF, #000, 5px, 3px, 2px 2px 5px rgba(0, 0, 0, .50));
+  }
+  ```
 
 #### SASS
+
+example one
 ```sass
 span
   @include tipsy()  
+```
 
-//or
-
+example two
+```sass
 span
   @include tipsy(s, #FFF, #000, 5px, 3px)
+```
 
-//or
-
+example three
+```sass
 span
   @include tipsy(s, #FFF, #000, 5px, 3px, 2px 2px 5px rgba(0, 0, 0, .50))
 ```
