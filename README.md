@@ -51,7 +51,7 @@ An easy to use tooltip library implemented in Sass
   `$gravity: nw | n | ne | e | se | s | sw | w`
   - `nw` = northwest
   -  `n` = north
-  - `nw` = northeast
+  - `ne` = northeast
   - `se` = southeast
   -  `s` = south
   - `sw` = southwest
