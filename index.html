@@ -35,16 +35,16 @@ Fermentum magna <span class="tipsy-s" data-tipsy="foo bar">rhoncus</span> incept
 </p>
 
 
-<h2>
+      <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<code>bower install tipsy.sass</code>
+<p><code>bower install tipsy.sass</code></p>
 
 <h2>
 <a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
 <h3>
-<a id="import-tipsysass-in-your-stylesheet" class="anchor" href="#import-tipsysass-in-your-stylesheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import Tipsy.sass in your stylesheet</h3>
+<a id="import-tipsysass-in-your-stylesheet" class="anchor" href="#import-tipsysass-in-your-stylesheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import tipsy.sass in your stylesheet</h3>
 
 <p><strong>SCSS</strong></p>
 
@@ -55,93 +55,109 @@ Fermentum magna <span class="tipsy-s" data-tipsy="foo bar">rhoncus</span> incept
 <div class="highlight highlight-source-sass"><pre><span class="pl-k">@import</span> <span class="pl-s">"tipsy"</span></pre></div>
 
 <h3>
-<a id="tipsysass-have-6-optional-parameters" class="anchor" href="#tipsysass-have-6-optional-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tipsy.sass have 6 <em>optional</em> parameters</h3>
+<a id="tipsy-has-6-optional-parameters" class="anchor" href="#tipsy-has-6-optional-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>tipsy has 6 <em>optional</em> parameters</h3>
 
-<h4>
-<a id="tooltip--arrow-position" class="anchor" href="#tooltip--arrow-position" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip &amp; Arrow Position</h4>
+<ol>
+<li>
+<p>Tooltip &amp; Arrow Position</p>
 
-<pre><code>  $gravity: nw | n | ne | e | se | s | sw | w`
-</code></pre>
+<p><code>$gravity: nw | n | ne | e | se | s | sw | w</code></p>
 
-<h4>
-<a id="tooltip-text-color" class="anchor" href="#tooltip-text-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Text Color</h4>
+<ul>
+<li>
+<code>nw</code> = northwest</li>
+<li> <code>n</code> = north</li>
+<li>
+<code>nw</code> = northeast</li>
+<li>
+<code>se</code> = southeast</li>
+<li> <code>s</code> = south</li>
+<li>
+<code>sw</code> = southwest</li>
+<li> <code>w</code> = west</li>
+</ul>
+</li>
+<li>
+<p>Tooltip Text Color</p>
 
-<pre><code>  $color: HEX | RGB | RGBA | HSL
-</code></pre>
+<p><code>$color: HEX | RGB | RGBA | HSL</code></p>
+</li>
+<li>
+<p>Tooltip Background Color</p>
 
-<h4>
-<a id="tooltip-background-color" class="anchor" href="#tooltip-background-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Background Color</h4>
+<p><code>$background: HEX | RGB | RGBA | HSL</code></p>
+</li>
+<li>
+<p>Tooltip Arrow Size</p>
 
-<pre><code>  $background: HEX | RGB | RGBA | HSL
-</code></pre>
+<p><code>$border-size: px | em | rem</code>
+<em>or any <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">unit of length</a></em></p>
+</li>
+<li>
+<p>Tooltip Border Radius</p>
 
-<h4>
-<a id="tooltip-arrow-size" class="anchor" href="#tooltip-arrow-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Arrow Size</h4>
+<p><code>$border-radius: px | em | rem</code>
+<em>or any <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">unit of length</a></em></p>
+</li>
+<li>
+<p>Tooltip Shadow</p>
 
-<pre><code>  $border-size: px | em | rem
-</code></pre>
-
-<h4>
-<a id="tooltip-border-radius" class="anchor" href="#tooltip-border-radius" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Border Radius</h4>
-
-<pre><code>  $border-radius: px | em | rem
-</code></pre>
-
-<h4>
-<a id="tooltip-shadow" class="anchor" href="#tooltip-shadow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooltip Shadow</h4>
-
-<pre><code>  $box-shadow: 0px,0px,0px rgba(0,0,0,0.2)
-  // same syntax as the box-shadow css property
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
-</code></pre>
+<p><code>$box-shadow: 0px,0px,0px rgba(0,0,0,0.2)</code>
+<em>same syntax as the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">box-shadow css property</a></em></p>
+</li>
+</ol>
 
 <h3>
 <a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h3>
 
-<h4>
-<a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h4>
+<h5>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h5>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">span</span> <span class="pl-e">data-tipsy</span>=<span class="pl-s"><span class="pl-pds">"</span>sample text that will be displayed in tooltip<span class="pl-pds">"</span></span>&gt;foo bar&lt;/<span class="pl-ent">span</span>&gt;</pre></div>
 
-<h4>
-<a id="scss" class="anchor" href="#scss" aria-hidden="true"><span class="octicon octicon-link"></span></a>SCSS</h4>
+<h5>
+<a id="scss" class="anchor" href="#scss" aria-hidden="true"><span class="octicon octicon-link"></span></a>SCSS</h5>
 
-<div class="highlight highlight-source-scss"><pre><span class="pl-ent">span</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>();
-}
+<p>example one</p>
 
-<span class="pl-c">//or</span>
+<div class="highlight highlight-source-scss"><pre>  <span class="pl-ent">span</span> {
+    <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>();
+  }</pre></div>
 
-<span class="pl-ent">span</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>(<span class="pl-v">s</span>, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>);
-}
+<p>example two</p>
 
-<span class="pl-c">//or</span>
+<div class="highlight highlight-source-scss"><pre>  <span class="pl-ent">span</span> {
+    <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>(<span class="pl-v">s</span>, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>);
+  }</pre></div>
 
-<span class="pl-ent">span</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>(<span class="pl-v">s</span>, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 5</span><span class="pl-k">px</span> <span class="pl-c1">rgba</span>(<span class="pl-c1">0, 0, 0</span>,<span class="pl-c1"> .50</span>));
-}</pre></div>
+<p>example three</p>
+
+<div class="highlight highlight-source-scss"><pre>  <span class="pl-ent">span</span> {
+    <span class="pl-k">@include</span> <span class="pl-c1">tipsy</span>(<span class="pl-v">s</span>, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 5</span><span class="pl-k">px</span> <span class="pl-c1">rgba</span>(<span class="pl-c1">0, 0, 0</span>,<span class="pl-c1"> .50</span>));
+  }</pre></div>
 
 <h4>
 <a id="sass" class="anchor" href="#sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>SASS</h4>
 
+<p>example one</p>
+
 <div class="highlight highlight-source-sass"><pre><span class="pl-k">span</span>
-  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>()
+  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>()  </pre></div>
 
-<span class="pl-c">//or</span>
+<p>example two</p>
 
-<span class="pl-k">span</span>
-  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>(s, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>)
+<div class="highlight highlight-source-sass"><pre><span class="pl-k">span</span>
+  <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>(s, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>)</pre></div>
 
-<span class="pl-c">//or</span>
+<p>example three</p>
 
-<span class="pl-k">span</span>
+<div class="highlight highlight-source-sass"><pre><span class="pl-k">span</span>
   <span class="pl-k">@include</span><span class="pl-c1"> tipsy</span>(s, <span class="pl-c1">#FFF</span>, <span class="pl-c1">#000</span>,<span class="pl-c1"> 5</span><span class="pl-k">px</span>,<span class="pl-c1"> 3</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 2</span><span class="pl-k">px</span><span class="pl-c1"> 5</span><span class="pl-k">px</span> <span class="pl-c1">rgba</span>(0, 0, 0, .50))</pre></div>
 
+<h3>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h3>
 
-<h2>
-<a id="contributing" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
-<p>Feel free to create issues, request features, or submit merge requests.</p>
+<p>Feel free to create issues, request features, or submit merge requests. </p>
 
     </section>
 
