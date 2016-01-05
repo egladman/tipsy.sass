@@ -134,4 +134,4 @@ span
 
 
 ### Contributing
-Feel free to create issues, request features, or submit merge requests. 
+Feel free to create issues, request features, or submit pull requests. 
