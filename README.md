@@ -1,34 +1,14 @@
 # tipsy.sass
-An easy to use tooltip library implemented in Sass
+A tooltip library implemented in Sass maintained and developed by Eli Gladman. This project was originally created by Đặng Văn Thanh.
 
-[DEMO](http://eli.gladman.xyz/tipsy.sass/)
-
-### Changelog
-- v1.1.2:
-  - fixed bug where the directional pointer would be prematurely clipped when `$gravity` was either `e` or `w`
-  - changed the default tooltip text/background color
-  - added missing browser prefixes to transformations and transitions
-  - use `em` and `ch` instead of `px`
-- v1.1.1:
-  - added bower support
-- v1.1.0:
-  - added default values to parameters
-  - revised variable names to better reflect their associated css property
-  - added text color & box-shadow parameters
-  - removed support for `.scss` variant
-- v1.0.5:
-  - Change background variable
-  - Added arrow border size of tooltip
-- v1.0.4:
-  - Fix reversed tipsy. Thank you [@esteinborn](https://github.com/esteinborn)
-
-
-
-## Installation
-`bower install tipsy.sass`
-
+### [DEMO](http://eli.gladman.xyz/tipsy.sass/)
 
 ## Getting Started
+
+### Installation
+```
+bower install tipsy.sass
+```
 
 ### Import tipsy.sass in your stylesheet
 
